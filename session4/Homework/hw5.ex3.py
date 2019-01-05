@@ -14,4 +14,3 @@ while loop:
     else:
         print("Pleasy try again")
         ques = int(input("If x = 8, then what is the value of 4(x+3)? "))
-
