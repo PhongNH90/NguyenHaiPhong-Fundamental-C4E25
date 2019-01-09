@@ -30,4 +30,5 @@ for p in post_list:         #đọc xem trong tủ có những gì
 # post_collection.insert_one(new_post)
 
 #Bước 6: Close connection
+
 client.close()
