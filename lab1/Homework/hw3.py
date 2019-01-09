@@ -8,7 +8,7 @@ client = MongoClient(uri)
 db = client.get_database()
 
 #Bước 3: get a collection (mở tủ)
-post_collection = db["PhongNH"]
+post_collection = db["posts"]
 
 #Bước 4: Create a document
 new_post = {
