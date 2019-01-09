@@ -44,7 +44,7 @@ while loop:
     if ques == "P" or "p":
         p1_salary = p1["salary"] * p1["hours"]
         print("The salary of", p1["name"], "is: ", p1_salary)
-        ques = input("Whose salary do you want to know? (P/D/Q) ")
+        # ques = input("Whose salary do you want to know? (P/D/Q) ")
 
     elif ques == "D" or "d":
         d1_salary = d1["salary"] * d1["hours"]
