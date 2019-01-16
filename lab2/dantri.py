@@ -38,8 +38,8 @@ li_list = ul_news.find_all("li")
 new_list = []
 for li in li_list:  # li = li_list[0]  quet bang vong for
     #walking
-    h4 = li.h4   # . co nghia la cua. h4 la cua li, a la cua h4
-    a = h4.a
+    h4 = li.h4   # dien ta cach li di vao h4
+    a = h4.a    # dien ta cach h4 di vao a
     link = url + a["href"]
     # print(link)
     title = a.string

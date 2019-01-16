@@ -10,22 +10,19 @@ content = raw_data.decode("utf8")
 soup = BeautifulSoup(content, "html.parser")
 
 #2. Find ROI
-table = soup.find("table", "tableContent")
+table = soup.find("table",id = "tableContent")
 tr_list = table.find_all("tr")
 
 
 #3. Copy & Save 
-new_list = []
+data_list = []
 for tr in tr_list:
-    td_list = tr_list.find_all("td")
-    artist = li.h4.a.string
-    link = li.h4.a["href"]
+    td_list = tr.find_all("td")
+    for td in td_list:
+        data = td.string
+        figures = {
+        "data": data,
+        }
+        data_list.append(OrderedDict(figures))
 
-    news = {
-        "song": song,
-        "artist": artist,
-        "link": link
-    }
-    new_list.append(OrderedDict(news))
-
-pyexcel.save_as(records=new_list, dest_file_name="itunes.xlsx")
+pyexcel.save_as(records=data_list, dest_file_name="BCTC Vinamilk.xlsx")
