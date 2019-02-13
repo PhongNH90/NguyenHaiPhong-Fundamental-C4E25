@@ -8,18 +8,18 @@ mlab.connect()
 # 1.1 Create a food data
 f = Food(title = "banh sai", link = "<<link sai>>")  # link is image's link
 # 1.2 Save it
-f.save()
+# f.save()
 
 # 2. Read
 
 # 2.1 Get cursor
 # Lazy loading
-f_objects = Food.objects()  # lazy loading  # same as list
+f_objects = Food.objects()  # lazy loading  # TƯƠNG TỰ NHƯ MỘT LIST   
 
 # 2.2 Process cursor
-f_first = f_objects[0]   # actual data transfering
-# print(f_first.title)
-# print(f_first.link)
+f_first = f_objects[0]   # thực sự xảy ra việc truyền dữ liệu
+print(f_first.title)
+print(f_first.link)
 
 # print(len(f_objects))  # dev dem
 # print(f_objects.count())  # cursor dem
